@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Template</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+
 <h1>{{ title }} template page is working!</h1>
 
 {% for obj in object_list %}
@@ -15,10 +13,9 @@
 <p>{{ obj.timestamp }}</p>
 <p>{{ obj.updated }}</p>
 <p>{{ obj.id }}</p>
-<p>{{ obj.pk }}</p>
+<!-- <p>{{ obj.pk }}</p> -->
 <br>
 
 {% endfor %}
 
-</body>
-</html>
+{% endblock content %}
